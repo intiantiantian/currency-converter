@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 220px;
+      font-family: Arial, sans-serif;
+      padding: 12px;
+      margin: 0;
+      background-color: #f8fafc;
+    }
+    h3 {
+      margin-top: 0;
+      font-size: 14px;
+      color: #0f172a;
+    }
+    label {
+      font-size: 12px;
+      color: #475569;
+    }
+    select, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 8px;
+      border-radius: 4px;
+      border: 1px solid #cbd5e1;
+      font-size: 13px;
+      box-sizing: border-box;
+    }
+    .primary-btn {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .secondary-btn {
+      background-color: #0f172a;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    #status, #last-updated {
+      font-size: 11px;
+      color: #64748b;
+      margin-top: 6px;
+      text-align: center;
+    }
+    #status {
+      color: #16a34a;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h3>Settings</h3>
+  <label for="currency-select">Convert To:</label>
+  <select id="currency-select">
+    <option value="PHP">PHP (Philippine Peso)</option>
+    <option value="USD">USD (US Dollar)</option>
+    <option value="EUR">EUR (Euro)</option>
+    <option value="GBP">GBP (British Pound)</option>
+    <option value="JPY">JPY (Japanese Yen)</option>
+  </select>
+
+  <button id="save-btn" class="primary-btn">Save Preference</button>
+
+  <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 12px 0;">
+
+  <button id="update-rates-btn" class="secondary-btn">Update Rates Now</button>
+  <div id="last-updated">Last Updated: Never</div>
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
